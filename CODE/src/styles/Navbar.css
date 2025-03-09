@@ -1,0 +1,103 @@
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;  /* Set the width of the side navbar */
+    background-color: rgb(255, 14, 14);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    z-index: 100;
+    animation: slideInSidebar 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+.Navbar h3 {
+    font-family: 'Whisper', cursive;
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.Navbar h3:hover {
+    transform: scale(1.1);
+}
+
+.Navbar .nav-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.Navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.Navbar a {
+    text-decoration: none;
+}
+
+.Navbar ul li {
+    list-style: none;
+    cursor: pointer;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.Navbar ul li:hover {
+    color: #ffffff;
+}
+
+.Navbar ul Link {
+    list-style: none;
+    cursor: pointer;
+    color: #807e7e;
+    transition: color 0.3s ease;
+}
+
+.Navbar ul Link:hover {
+    color: #ffffff;
+}
+
+
+    display: flex;
+    align-items: center;
+    border: 1px solid #3f3f3faf;
+    padding: 3px;
+    border-radius: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.7s;
+    margin-top: 30px;  /* Add some space from the navigation items *
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInSidebar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
